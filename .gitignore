@@ -3,6 +3,7 @@ node_modules
 package.json
 npm-debug.log
 main.js
+js/firebase-key.js
 .sass-cache
 *.map
 *.scss

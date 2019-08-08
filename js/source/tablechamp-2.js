@@ -44,13 +44,15 @@
         fbdb = firebase.database();
         init();
     });
+    function login() {
+      // Make sure they're logged in
+      auth.onAuthStateChanged(function(user) {
+          if (!user) {
+              window.location = "./index.html";
+          }
+      });
+    }
     function init() {
-        // Make sure they're logged in
-        auth.onAuthStateChanged(function(user) {
-            if (!user) {
-                window.location = "./index.html";
-            }
-        });
         initLoader();
         initHeader();
         initEvents();
